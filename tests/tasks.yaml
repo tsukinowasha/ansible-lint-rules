@@ -1,0 +1,14 @@
+- name: playbook for task category
+  hosts: localhost
+  gather_facts: no
+  vars:
+    foo: "tasks"
+  tasks:
+    - name: use local action
+      local_action: file path=/tmp/tasks state=touch
+    - name: many argument with =
+      file: path="/tmp/tasks" state=touch group=wheel mode=0700 force=yes
+    - name: variable with no space
+      file: path="/tmp/{{foo}}" state=touch
+    - name: variable with space  # lint does not match
+      file: path="/tmp/{{ foo }}" state=touch

@@ -1,0 +1,5 @@
+- name: playbook for roles category
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - template: src="hoge.noj2" dest="/tmp/hoge"

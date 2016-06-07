@@ -1,0 +1,4 @@
+- template:
+    src: ../templates/hoge.yml
+    dest: /tmp/hoge.yml
+- include: included.yml

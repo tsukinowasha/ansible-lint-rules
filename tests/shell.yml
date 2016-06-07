@@ -1,0 +1,23 @@
+- name: playbook for shell category
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: does not have creates
+      shell: echo "hoge"
+    - name: use mount
+      shell: mount
+      args:
+        creates: /tmp
+    - name: use sysctl module
+      shell: sysctl -a 
+      args:
+        creates: /tmp
+    - name: use file module to chown
+      shell: chown -R hoge .
+      args:
+        creates: /tmp
+    - name: use file module to chmod
+      shell: chmod ugo+r .
+      args:
+        creates: /tmp
+        
