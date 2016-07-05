@@ -7,9 +7,9 @@ class ShellAltSysctl(AnsibleLintRule):
     tags = ['shell']
 
     def matchtask(self, file, task):
-        if task['action']['module'] not in ['shell', 'command']:
+        if task['action']['__ansible_module__'] not in ['shell', 'command']:
             return False
-        if ('sysctl' in task['action']['module_arguments'] and
+        if ('sysctl' in task['action']['__ansible_arguments__'] and
             'register' not in task):
             return True
         return False

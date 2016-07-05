@@ -7,7 +7,7 @@ class ShellHasCreates(AnsibleLintRule):
     tags = ['shell']
 
     def matchtask(self, file, task):
-        if task['action']['module'] not in ['shell', 'command']:
+        if task['action']['__ansible_module__'] not in ['shell', 'command']:
             return False
         if 'creates' in task['action'] or 'removes' in task['action']:
             return False

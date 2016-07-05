@@ -8,7 +8,7 @@ class ModuleTemplateExt(AnsibleLintRule):
     tags = ['module']
 
     def matchtask(self, file, task):
-        if task['action']['module'] != 'template':
+        if task['action']['__ansible_module__'] != 'template':
             return False
         ext = os.path.splitext(task['action']['src'])
         if ext[1] != ".j2":

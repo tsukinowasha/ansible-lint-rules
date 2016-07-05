@@ -7,8 +7,8 @@ class ShellAltUfw(AnsibleLintRule):
     tags = ['shell']
 
     def matchtask(self, file, task):
-        if task['action']['module'] not in ['shell', 'command']:
+        if task['action']['__ansible_module__'] not in ['shell', 'command']:
             return False
-        if 'ufw' in task['action']['module_arguments']:
+        if 'ufw' in task['action']['__ansible_arguments__']:
             return True
         return False
