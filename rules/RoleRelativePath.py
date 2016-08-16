@@ -29,13 +29,13 @@ class RoleRelativePath(AnsibleLintRule):
             if not isinstance(play['copy'], dict):
                 return False
             if 'src' in play['copy']:
-                if "../copys" in play['copy']['src']:
+                if "../files" in play['copy']['src']:
                     return ({'sudo': play['copy']},
                                 self.shortdesc)
         if 'win_copy' in play:
             if not isinstance(play['win_copy'], dict):
                 return False
-            if "../win_copys" in play['win_copy']['src']:
+            if "../files" in play['win_copy']['src']:
                 return ({'sudo': play['win_copy']},
                                 self.shortdesc)
         return []
