@@ -1,9 +1,9 @@
 from ansiblelint import AnsibleLintRule
 
 # FIXME: how to get include task?
-class TaskIncludeShouldHasTags(AnsibleLintRule):
+class TaskIncludeShouldHaveTags(AnsibleLintRule):
     id = 'E302'
-    shortdesc = 'Include should has tags'
+    shortdesc = 'Include should have tags'
     description = ''
     tags = ['task']
 

@@ -4,7 +4,7 @@ import re
 
 class TaskVariableHasSpace(AnsibleLintRule):
     id = 'E305'
-    shortdesc = 'Variable should has space "{{ foo }}"'
+    shortdesc = 'Variables should be enclosed by spaces "{{ foo }}"'
     description = ''
     tags = ['task']
 
