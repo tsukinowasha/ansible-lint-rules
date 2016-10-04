@@ -4,7 +4,7 @@ import os
 
 class PlaybookExtention(AnsibleLintRule):
     id = 'E101'
-    shortdesc = 'playbook should has ".yml" extention'
+    shortdesc = 'playbooks should have the ".yml" extention'
     description = ''
     tags = ['playbook']
     done = []  # already noticed path list
