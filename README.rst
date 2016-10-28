@@ -2,7 +2,7 @@
 Rules for ansible-lint
 ====================================
 
-This is a rule set for `ansible-lint <https://github.com/willthames/ansible-lint>`_ . 
+This is a rule set for `ansible-lint <https://github.com/willthames/ansible-lint>`_ .
 
 These rules are used in the `Tsukinowa Inc. <http://tsukinowa.jp>`_ , but anyone can use with the license (MIT).
 
@@ -22,7 +22,7 @@ Rules
 +============+======================================================================+
 |**E1**      |*playbook*                                                            |
 +------------+----------------------------------------------------------------------+
-|E101        |Playbook should has ".yml" extention                                  |
+|E101        |Playbook should has ".yml" extension                                  |
 +------------+----------------------------------------------------------------------+
 +------------+----------------------------------------------------------------------+
 |**E2**      |*Role*                                                                |
@@ -38,7 +38,7 @@ Rules
 +------------+----------------------------------------------------------------------+
 |E303        |Use ":" YAML syntax when arguments are over 4                         |
 +------------+----------------------------------------------------------------------+
-|E304        |Do not use local_action. use delegate_to: localhost instead           | 
+|E304        |Do not use local_action. use delegate_to: localhost instead           |
 +------------+----------------------------------------------------------------------+
 |E305        |Variable should has space "{{ foo }}"                                 |
 +------------+----------------------------------------------------------------------+
@@ -47,10 +47,10 @@ Rules
 +------------+----------------------------------------------------------------------+
 |E401        |Octal file permissions must contain leading zero                      |
 +------------+----------------------------------------------------------------------+
-|E402        |Template file should has '.j2' extention                              |
+|E402        |Template file should has '.j2' extension                              |
 +------------+----------------------------------------------------------------------+
 +------------+----------------------------------------------------------------------+
-|**E5**      |*Shell/Command alternative module*                                    |                 
+|**E5**      |*Shell/Command alternative module*                                    |
 +------------+----------------------------------------------------------------------+
 |E501        |Use chmod module                                                      |
 +------------+----------------------------------------------------------------------+
@@ -100,4 +100,3 @@ License
 ==============
 
 MIT License (same as ansible-lint)
-
