@@ -21,7 +21,7 @@
 from ansiblelint import AnsibleLintRule
 
 
-class TaskShouldHasName(AnsibleLintRule):
+class TaskShouldHaveName(AnsibleLintRule):
     id = 'E301'
     shortdesc = 'All tasks should be named'
     description = 'All tasks should have a distinct name for readability ' + \

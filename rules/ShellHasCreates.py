@@ -2,7 +2,7 @@ from ansiblelint import AnsibleLintRule
 
 class ShellHasCreates(AnsibleLintRule):
     id = 'E511'
-    shortdesc = 'shell/command module must contain creates or removes'
+    shortdesc = 'Shell/command module must contain creates or removes'
     description = ''
     tags = ['shell']
 

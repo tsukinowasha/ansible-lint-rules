@@ -2,9 +2,9 @@ from ansiblelint import AnsibleLintRule
 
 import os
 
-class PlaybookExtention(AnsibleLintRule):
+class PlaybookExtension(AnsibleLintRule):
     id = 'E101'
-    shortdesc = 'playbooks should have the ".yml" extention'
+    shortdesc = 'Playbooks should have the ".yml" extension'
     description = ''
     tags = ['playbook']
     done = []  # already noticed path list
@@ -19,5 +19,3 @@ class PlaybookExtention(AnsibleLintRule):
             self.done.append(path)
             return True
         return False
-
-
