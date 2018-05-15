@@ -39,7 +39,7 @@ class ModuleOctalPermissions(AnsibleLintRule):
     def matchtask(self, file, task):
         if task["action"]["__ansible_module__"] in self._modules:
             mode = task['action'].get('mode', None)
-            if isinstance(mode, basestring) and self.mode_regex.match(mode):
+            if isinstance(mode, str) and self.mode_regex.match(mode):
                 return not self.valid_mode_regex.match(mode)
             if isinstance(mode, int):
                 # sensible file permission modes don't
