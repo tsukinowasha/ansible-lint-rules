@@ -1,10 +1,10 @@
 ====================================
-Rules for ansible-lint
+Rules for ansible-lint |travisstatus|
 ====================================
+.. |travisstatus| image:: https://travis-ci.org/lean-delivery/ansible-lint-rules.svg?branch=master
+    :target: https://travis-ci.org/lean-delivery/ansible-lint-rules
 
 This is a rule set for `ansible-lint <https://github.com/willthames/ansible-lint>`_ .
-
-These rules are used in the `Tsukinowa Inc. <http://tsukinowa.jp>`_ , but anyone can use with the license (MIT).
 
 How to use
 ----------------
@@ -93,6 +93,11 @@ Because user may want to use a command to correct use. Since we separete these r
 
 If you can manage playbook your self, consider set `skip_ansible_lint` tag.
 
+Original repo
+--------------------------------------------------------
+`tsukinowasha/ansible-lint-rules <https://github.com/tsukinowasha/ansible-lint-rules>`_
+
+These rules are used in the `Tsukinowa Inc. <http://tsukinowa.jp>`_ , but anyone can use with the license (MIT).
 
 
 
