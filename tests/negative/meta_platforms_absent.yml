@@ -1,0 +1,20 @@
+---
+
+galaxy_info:
+  author: Name Surname
+  description: Installs Package
+  company: EPAM Systems
+
+  issue_tracker_url: https://github.com/repo/role/issues
+
+  license: Apache
+
+  min_ansible_version: 2.4
+
+  github_branch: master
+
+  galaxy_tags:
+    - tag1
+    - tag2
+
+  dependencies: []
