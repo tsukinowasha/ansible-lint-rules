@@ -8,7 +8,7 @@ class LineTooLong(AnsibleLintRule):
     tags = ['formatting']
 
     def match(self, file, line):
-        if len(line) > 80:
+        if len(line) > 100:
             self.shortdesc += " ({} characters)".format(len(line))
             return True
         return False
