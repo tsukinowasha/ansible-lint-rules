@@ -38,10 +38,7 @@ class MetaShouldHaveCompany(AnsibleLintRule):
         company = play["galaxy_info"].get("company", None)
 
         if not company:
-            return (
-                "company is undefined or empty",
-                self.shortdesc
-            )
+            return False
         elif company == "your company (optional)":
             return (
                 "Define company, instead of default placeholder",
