@@ -19,7 +19,6 @@
 # THE SOFTWARE.
 
 from ansiblelint import AnsibleLintRule
-from ansible.parsing.yaml.objects import AnsibleSequence
 
 
 class MetaShouldHaveDependencies(AnsibleLintRule):
@@ -43,7 +42,7 @@ class MetaShouldHaveDependencies(AnsibleLintRule):
                 "dependencies is undefined or empty",
                 self.shortdesc
             )
-        elif not isinstance(dependencies, AnsibleSequence):
+        elif not isinstance(dependencies, list):
             return (
                 "Dependencies should be set in a list data type",
                 self.shortdesc
