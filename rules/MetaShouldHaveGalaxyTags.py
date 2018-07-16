@@ -19,7 +19,6 @@
 # THE SOFTWARE.
 
 from ansiblelint import AnsibleLintRule
-from ansible.parsing.yaml.objects import AnsibleSequence
 
 
 class MetaShouldHaveGalaxyTags(AnsibleLintRule):
@@ -43,7 +42,7 @@ class MetaShouldHaveGalaxyTags(AnsibleLintRule):
                 "galaxy_tags is undefined or empty",
                 self.shortdesc
             )
-        elif not isinstance(galaxy_tags, AnsibleSequence):
+        elif not isinstance(galaxy_tags, list):
             return (
                 "Galaxy_tags should be set in a list data type",
                 self.shortdesc

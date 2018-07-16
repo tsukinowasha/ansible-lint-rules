@@ -19,7 +19,6 @@
 # THE SOFTWARE.
 
 from ansiblelint import AnsibleLintRule
-from ansible.parsing.yaml.objects import AnsibleSequence
 
 
 class MetaShouldHavePlatforms(AnsibleLintRule):
@@ -43,7 +42,7 @@ class MetaShouldHavePlatforms(AnsibleLintRule):
                 "platforms is undefined or empty",
                 self.shortdesc
             )
-        elif not isinstance(platforms, AnsibleSequence):
+        elif not isinstance(platforms, list):
             return (
                 "Platforms should be set in a list data type",
                 self.shortdesc
