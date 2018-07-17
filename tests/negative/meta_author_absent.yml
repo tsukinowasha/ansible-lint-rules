@@ -1,6 +1,7 @@
 ---
 
 galaxy_info:
+  role_name: ansible_role
   # author: your name
   description: Installs Package
   company: EPAM Systems
