@@ -1,6 +1,7 @@
 ---
 
 galaxy_info:
+  role_name:
   author: Name Surname
   description: Installs Package
   company: EPAM Systems

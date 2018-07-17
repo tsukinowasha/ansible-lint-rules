@@ -21,12 +21,12 @@
 from ansiblelint import AnsibleLintRule
 
 
-class MetaShouldHaveGithubBranch(AnsibleLintRule):
-    """Ansible Lint Rule - Meta Should Have GitHub branch specified"""
+class MetaShouldHaveRoleName(AnsibleLintRule):
+    """Ansible Lint Rule - Meta Should Have Role Name"""
 
     id = "E706"
-    shortdesc = "Meta information should have a valid github_branch value"
-    description = "Checking that github_branch field is valid"
+    shortdesc = "Meta information should have a valid role_name fields"
+    description = "Checking that role_name field is valid"
     tags = ['meta']
 
     def matchplay(self, ansible_file, play):
@@ -35,11 +35,11 @@ class MetaShouldHaveGithubBranch(AnsibleLintRule):
         if "galaxy_info" not in play:
             return False
 
-        github_branch = play["galaxy_info"].get("github_branch", None)
+        role_name = play["galaxy_info"].get("role_name", None)
 
-        if not github_branch:
+        if not role_name:
             return (
-                "github_branch is undefined or empty",
+                "role_name is undefined or empty",
                 self.shortdesc
             )
 
