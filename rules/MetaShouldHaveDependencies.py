@@ -35,14 +35,12 @@ class MetaShouldHaveDependencies(AnsibleLintRule):
         if "galaxy_info" not in play:
             return False
 
-        dependencies = play["galaxy_info"].get("dependencies", None)
-
-        if dependencies == None:
+        if "dependencies" not in play:
             return (
                 "dependencies is undefined or empty",
                 self.shortdesc
             )
-        elif not isinstance(dependencies, list):
+        elif not isinstance(play["dependencies"], list):
             return (
                 "Dependencies should be set in a list data type",
                 self.shortdesc

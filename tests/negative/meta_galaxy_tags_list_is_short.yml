@@ -22,4 +22,4 @@ galaxy_info:
   galaxy_tags:
     - tag1
 
-  dependencies: []
+dependencies: []
