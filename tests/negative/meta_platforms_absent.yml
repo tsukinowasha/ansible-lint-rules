@@ -18,4 +18,4 @@ galaxy_info:
     - tag1
     - tag2
 
-  dependencies: []
+dependencies: []
