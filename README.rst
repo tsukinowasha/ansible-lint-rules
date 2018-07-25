@@ -1,10 +1,10 @@
 ====================================
-Rules for ansible-lint
+Rules for ansible-lint |travisstatus|
 ====================================
+.. |travisstatus| image:: https://travis-ci.org/lean-delivery/ansible-lint-rules.svg?branch=master
+    :target: https://travis-ci.org/lean-delivery/ansible-lint-rules
 
 This is a rule set for `ansible-lint <https://github.com/willthames/ansible-lint>`_ .
-
-These rules are used in the `Tsukinowa Inc. <http://tsukinowa.jp>`_ , but anyone can use with the license (MIT).
 
 How to use
 ----------------
@@ -41,6 +41,8 @@ Rules
 |E304        |Do not use local_action. use delegate_to: localhost instead           |
 +------------+----------------------------------------------------------------------+
 |E305        |Variable should has space "{{ foo }}"                                 |
++------------+----------------------------------------------------------------------+
+|E306        |Variable should be lowercase "{{ foo }}"                              |
 +------------+----------------------------------------------------------------------+
 +------------+----------------------------------------------------------------------+
 |**E4**      |*Module*                                                              |
@@ -84,6 +86,26 @@ Rules
 |E602        |Line too long                                                         |
 +------------+----------------------------------------------------------------------+
 +------------+----------------------------------------------------------------------+
+|**E7**      |*Metadata*                                                            |
++------------+----------------------------------------------------------------------+
+|E701        |Incorrect Author in meta                                              |
++------------+----------------------------------------------------------------------+
+|E702        |Incorrect Minimal Ansible version in meta                             |
++------------+----------------------------------------------------------------------+
+|E703        |Incorrect Company in meta                                             |
++------------+----------------------------------------------------------------------+
+|E704        |Incorrect Dependencies in meta                                        |
++------------+----------------------------------------------------------------------+
+|E705        |Incorrect Galaxy tags in meta                                         |
++------------+----------------------------------------------------------------------+
+|E706        |Absent Role name in meta                                              |
++------------+----------------------------------------------------------------------+
+|E707        |Incorrect Issue tracker in meta                                       |
++------------+----------------------------------------------------------------------+
+|E708        |Incorrect License in meta                                             |
++------------+----------------------------------------------------------------------+
+|E709        |Incorrect Platforms in meta                                           |
++------------+----------------------------------------------------------------------+
 
 
 Why so many shell module lint?
@@ -93,6 +115,11 @@ Because user may want to use a command to correct use. Since we separete these r
 
 If you can manage playbook your self, consider set `skip_ansible_lint` tag.
 
+Original repo
+--------------------------------------------------------
+`tsukinowasha/ansible-lint-rules <https://github.com/tsukinowasha/ansible-lint-rules>`_
+
+These rules are used in the `Tsukinowa Inc. <http://tsukinowa.jp>`_ , but anyone can use with the license (MIT).
 
 
 

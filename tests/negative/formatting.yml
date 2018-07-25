@@ -1,0 +1,5 @@
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: line is  toooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo longgggggggggggg
+      debug: msg="line too long"
