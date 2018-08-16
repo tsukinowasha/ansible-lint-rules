@@ -1,0 +1,12 @@
+- name: playbook for True/False
+  hosts: localhost
+  gather_facts: True
+  vars:
+    foo: "tasks"
+
+- name: playbook for True/False
+  hosts: localhost
+  gather_facts: False
+  vars:
+    foo: "tasks"
+

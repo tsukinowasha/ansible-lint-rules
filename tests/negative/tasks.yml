@@ -1,6 +1,6 @@
 - name: playbook for task category
   hosts: localhost
-  gather_facts: no
+  gather_facts: true
   vars:
     foo: "tasks"
   tasks:

@@ -1,6 +1,6 @@
 - name: playbook for shell category
   hosts: localhost
-  gather_facts: no
+  gather_facts: yes
   tasks:
     - name: does not have creates
       shell: echo "hoge"
