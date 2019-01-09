@@ -1,3 +1,10 @@
+.. note::
+
+  This repository has no longer maintained.
+
+  Please use some forks, e.g. `lean-delivery/ansible-lint-rules <https://github.com/lean-delivery/ansible-lint-rules>`_
+
+
 ====================================
 Rules for ansible-lint
 ====================================
